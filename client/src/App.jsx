@@ -1,12 +1,15 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import React from 'react';
+import Navbar from './components/Navbar';
+import bgImage from '../src/assets/beautiful.jpg';
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <div className="bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bgImage})` }}>
+    <div className='bg-black bg-opacity-20'>
+       <Navbar />
+    </div> 
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
