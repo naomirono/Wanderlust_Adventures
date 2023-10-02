@@ -7,13 +7,15 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <div className="text-white font-bold text-xl mr-4">Logo</div>
-          <ul className="hidden md:flex space-x-4">
-            <li><a href="#" className="text-white">Home</a></li>
-            <li><a href="#" className="text-white">Top Deals</a></li>
-            <li><a href="#" className="text-white">Destinations</a></li>
-            <li><a href="#" className="text-white">Contacts</a></li>
-            <li><a href="#" className="text-white">Blog</a></li>
-          </ul>
+        </div>
+        <div className="flex items-center">
+          <ul className="hidden md:flex space-x-5">
+              <li><a href="#" className="text-white">Home</a></li>
+              <li><a href="#" className="text-white">Top Deals</a></li>
+              <li><a href="#" className="text-white">Destinations</a></li>
+              <li><a href="#" className="text-white">Contacts</a></li>
+              <li><a href="#" className="text-white">Blog</a></li>
+            </ul>
         </div>
         <div className="flex items-center">
           <div className="mr-4">
