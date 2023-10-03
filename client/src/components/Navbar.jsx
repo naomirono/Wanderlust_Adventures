@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { FiSearch, FiCheck } from 'react-icons/fi';
-import LogoImage from '../assets/logo1.png'
+import LogoImage from '../assets/W_logo.png'
 
 const Navbar = () => {
   const [isTyping, setIsTyping] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <img src={LogoImage} alt="Logo" className="h-14" />
+          <img src={LogoImage} alt="Logo" className="h-16" />
         </div>
         <div className="flex items-center">
           <ul className="hidden md:flex space-x-5">
