@@ -39,10 +39,10 @@ const Navbar = () => {
           />
 
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-white"><FaFacebook className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
-            <a href="#" className="text-white"><FaInstagram className="text-3xl bg-white rounded-full p-1 text-pink-500 hover:text-pink-700 cursor-pointer"/></a>
-            <a href="#" className="text-white"><FaTwitter className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
-            <a href="#" className="text-white"><FaLinkedin className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
+            <a href="#" ><FaFacebook className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
+            <a href="#" ><FaInstagram className="text-3xl bg-white rounded-full p-1 text-pink-500 hover:text-pink-700 cursor-pointer"/></a>
+            <a href="#" ><FaTwitter className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
+            <a href="#" ><FaLinkedin className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
           </div>
         </div>
       </div>
