@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,6 +10,8 @@ import card5 from '../assets/card5.jpg';
 import card6 from '../assets/card6.jpg';
 
 const HeroSection = () => {
+    const sliderRef = useRef(null);
+
   const cards = [
     { id: 1, title: ' Diani', imageUrl: card3 },
     { id: 2, title: 'Maasai Mara', imageUrl: card1 },
@@ -42,6 +44,14 @@ const HeroSection = () => {
     ],
   };
 
+  const handlePrevClick = () => {
+    sliderRef.current.slickPrev();
+  };
+
+  const handleNextClick = () => {
+    sliderRef.current.slickNext();
+  };
+
   return (
     <div className="flex h-[88vh] pt-24">
       <div className="w-1/2 p-10 ml-16">
@@ -61,7 +71,7 @@ const HeroSection = () => {
         </button>
       </div>
       <div className="w-1/2 mr-10 mt-36 relative">
-        <Slider {...sliderSettings}>
+        <Slider ref={sliderRef} {...sliderSettings}>
           {cards.map(card => (
             <div key={card.id} className="p-2">
               <div className="relative">
@@ -81,10 +91,14 @@ const HeroSection = () => {
           <button
             className="border border-white text-white rounded-full py-2 px-4"
             style={{ marginRight: '20px' }}
+            onClick={handlePrevClick}
           >
             {'<'}
           </button>
-          <button className="border border-white text-white rounded-full py-2 px-4">
+          <button 
+          className="border border-white text-white rounded-full py-2 px-4"
+          onClick={handleNextClick}
+          >
             {'>'}
           </button>
           <div className="border-b-2 border-white w-[550px] absolute bottom-4 ml-32"></div> {/* Added border */}
