@@ -1,0 +1,4 @@
+button.slick-arrow.slick-prev,
+button.slick-arrow.slick-next {
+  display: none !important;
+}
