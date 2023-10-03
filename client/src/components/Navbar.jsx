@@ -18,11 +18,11 @@ const Navbar = () => {
         </div>
         <div className="flex items-center">
           <ul className="hidden md:flex space-x-5">
-            <li><a href="#" className="text-white">Home</a></li>
-            <li><a href="#" className="text-white">Top Deals</a></li>
-            <li><a href="#" className="text-white">Destinations</a></li>
-            <li><a href="#" className="text-white">Contacts</a></li>
-            <li><a href="#" className="text-white">Blog</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-inter">Home</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-inter">Top Deals</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-inter">Destinations</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-inter">Contacts</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-inter">Blog</a></li>
           </ul>
         </div>
         <div className="relative flex items-center">
@@ -34,7 +34,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search"
-            className="text-gray-500 p-2 pl-10 rounded-3xl w-40 md:w-80 mr-6"
+            className="text-gray-500 p-2 pl-10 rounded-3xl w-40 md:w-80 mr-6 font-inter text-md"
             onChange={handleTyping}
           />
 
