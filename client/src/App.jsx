@@ -6,7 +6,7 @@ import HeroSection from './components/Hero';
 function App() {
   return (
     <div className="bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bgImage})` }}>
-    <div className='bg-black bg-opacity-20'>
+    <div className='bg-black bg-opacity-40'>
        <Navbar />
        <HeroSection/>
     </div> 
