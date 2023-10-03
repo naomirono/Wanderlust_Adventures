@@ -2,13 +2,12 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import card1 from '../assets/card1.jpg'
-import card2 from '../assets/card2.jpg'
-import card3 from '../assets/card3.jpg'
-import card4 from '../assets/card4.jpg'
-import card5 from '../assets/card5.jpg'
-import card6 from '../assets/card6.jpg'
-
+import card1 from '../assets/card1.jpg';
+import card2 from '../assets/card2.jpg';
+import card3 from '../assets/card3.jpg';
+import card4 from '../assets/card4.jpg';
+import card5 from '../assets/card5.jpg';
+import card6 from '../assets/card6.jpg';
 
 const HeroSection = () => {
   const cards = [
@@ -41,23 +40,36 @@ const HeroSection = () => {
         },
       },
     ],
-    
-    
   };
 
   return (
-    <div className="flex h-[89vh] pt-28">
+    <div className="flex h-[88vh] pt-24">
       <div className="w-1/2 p-10 ml-16">
-        <h1 className="text-4xl font-bold mb-4 text-white font-fira uppercase">Discover the Heartbeat of Africa with Unforgettable Kenya Tours</h1>
-        <p className="mb-4 text-gray-100 text-xl font-inter">Embark on a journey of a lifetime with our Kenya Travel and Tours Company. From the iconic savannahs of the Maasai Mara to the pristine beaches of the coastal region, we offer curated experiences that immerse you in the diverse landscapes, rich cultures, and abundant wildlife that Kenya has to offer. Our expert guides will lead you on safaris through untamed wilderness, introduce you to vibrant local communities, and ensure every moment is filled with awe and wonder.</p>
-        <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-[25px]">LEARN MORE</button>
+        <h1 className="text-4xl font-bold mb-4 text-white font-fira uppercase">
+          Discover the Heartbeat of Africa with Unforgettable Kenya Tours
+        </h1>
+        <p className="mb-4 text-gray-100 text-xl font-inter">
+          Embark on a journey of a lifetime with our Kenya Travel and Tours Company. From the
+          iconic savannahs of the Maasai Mara to the pristine beaches of the coastal region, we
+          offer curated experiences that immerse you in the diverse landscapes, rich cultures,
+          and abundant wildlife that Kenya has to offer. Our expert guides will lead you on
+          safaris through untamed wilderness, introduce you to vibrant local communities, and
+          ensure every moment is filled with awe and wonder.
+        </p>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-[25px]">
+          LEARN MORE
+        </button>
       </div>
-      <div className="w-1/2 mr-10 mt-32">
+      <div className="w-1/2 mr-10 mt-36 relative">
         <Slider {...sliderSettings}>
           {cards.map(card => (
             <div key={card.id} className="p-2">
               <div className="relative">
-                <img src={card.imageUrl} alt={card.title} className="object-cover h-80 w-full rounded-xl" />
+                <img
+                  src={card.imageUrl}
+                  alt={card.title}
+                  className="object-cover h-80 w-full rounded-xl"
+                />
                 <div className="absolute bottom-0 left-0 right-0 text-center text-white p-4">
                   <h2 className="text-xl font-bold font-fira uppercase">{card.title}</h2>
                 </div>
@@ -65,6 +77,18 @@ const HeroSection = () => {
             </div>
           ))}
         </Slider>
+        <div className="flex absolute w-full pt-8">
+          <button
+            className="border border-white text-white rounded-full py-2 px-4"
+            style={{ marginRight: '20px' }}
+          >
+            {'<'}
+          </button>
+          <button className="border border-white text-white rounded-full py-2 px-4">
+            {'>'}
+          </button>
+          <div className="border-b-2 border-white w-[550px] absolute bottom-4 ml-32"></div> {/* Added border */}
+        </div>
       </div>
     </div>
   );
