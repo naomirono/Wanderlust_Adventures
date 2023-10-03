@@ -5,15 +5,19 @@ import 'slick-carousel/slick/slick-theme.css';
 import card1 from '../assets/card1.jpg'
 import card2 from '../assets/card2.jpg'
 import card3 from '../assets/card3.jpg'
+import card4 from '../assets/card4.jpg'
+import card5 from '../assets/card5.jpg'
+import card6 from '../assets/card6.jpg'
+
 
 const HeroSection = () => {
   const cards = [
     { id: 1, title: ' Diani', imageUrl: card3 },
     { id: 2, title: 'Maasai Mara', imageUrl: card1 },
     { id: 3, title: 'Malindi', imageUrl: card2 },
-    { id: 4, title: 'Card 4', imageUrl: 'https://myretrobucket.s3.eu-north-1.amazonaws.com/IMG_0920.JPG' },
-    { id: 5, title: 'Card 5', imageUrl: 'https://myretrobucket.s3.eu-north-1.amazonaws.com/IMG_0920.JPG' },
-    { id: 6, title: 'Card 6', imageUrl: 'https://myretrobucket.s3.eu-north-1.amazonaws.com/IMG_0920.JPG' },
+    { id: 4, title: 'Mombasa', imageUrl: card4 },
+    { id: 5, title: 'Kilifi', imageUrl: card5 },
+    { id: 6, title: 'Watamu', imageUrl: card6 },
   ];
 
   const sliderSettings = {
@@ -55,7 +59,7 @@ const HeroSection = () => {
               <div className="relative">
                 <img src={card.imageUrl} alt={card.title} className="object-cover h-80 w-full rounded-xl" />
                 <div className="absolute bottom-0 left-0 right-0 text-center text-white p-4">
-                  <h2 className="text-2xl font-bold font-fira">{card.title}</h2>
+                  <h2 className="text-2xl font-bold font-fira ">{card.title}</h2>
                 </div>
               </div>
             </div>
