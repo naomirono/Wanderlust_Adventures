@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import bgImage from '../src/assets/beautiful.jpg';
+import bgImage from '../src/assets/bg3.jpg';
 import HeroSection from './components/Hero';
 
 function App() {
