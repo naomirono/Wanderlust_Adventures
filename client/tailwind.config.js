@@ -7,8 +7,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'fira': ['Fira Sans'],
-        'inter': ['Inter'],
+        sans: ['Open Sans', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        playfair:['Playfair Display', 'serif']
+      },
+      fontWeight: {
+        semibold: '600',
+        regular: '400',
       },
     },
   },
