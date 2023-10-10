@@ -10,7 +10,7 @@ import card4 from '../assets/card4.jpg';
 import card5 from '../assets/card5.jpg';
 import card6 from '../assets/card6.jpg';
 
-const HeroSection = () => {
+const HeroSection = ({ setBgImage }) => {
     const sliderRef = useRef(null);
 
   const cards = [
@@ -53,13 +53,17 @@ const HeroSection = () => {
     sliderRef.current.slickNext();
   };
 
+  const handleImageClick = (imageUrl) => {
+    setBgImage(imageUrl);
+  };
+
   return (
     <div className="flex h-[88vh] pt-24">
       <div className="w-1/2 p-10 ml-16">
-        <h1 className="text-4xl font-bold mb-4 text-white font-fira uppercase">
+        <h1 className="text-4xl font-semibold mb-4 text-white font-montserrat uppercase">
           Discover the Heartbeat of Africa with Unforgettable Kenya Tours
         </h1>
-        <p className="mb-4 text-gray-100 text-xl font-inter">
+        <p className="mb-4 text-gray-100 text-xl font-sans font-regular">
           Embark on a journey of a lifetime with our Kenya Travel and Tours Company. From the
           iconic savannahs of the Maasai Mara to the pristine beaches of the coastal region, we
           offer curated experiences that immerse you in the diverse landscapes, rich cultures,
@@ -76,13 +80,14 @@ const HeroSection = () => {
           {cards.map(card => (
             <div key={card.id} className="p-2">
               <div className="relative">
-                <img
-                  src={card.imageUrl}
-                  alt={card.title}
-                  className="object-cover h-80 w-full rounded-xl"
-                />
+              <img
+              src={card.imageUrl}
+              alt={card.title}
+              className="object-cover h-80 w-full rounded-xl"
+              onClick={() => handleImageClick(card.imageUrl)}
+            />
                 <div className="absolute bottom-0 left-0 right-0 text-center text-white p-4">
-                  <h2 className="text-xl font-bold font-fira uppercase">{card.title}</h2>
+                  <h2 className="text-xl font-bold font-sans uppercase">{card.title}</h2>
                 </div>
               </div>
             </div>

@@ -18,11 +18,11 @@ const Navbar = () => {
         </div>
         <div className="flex items-center">
           <ul className="hidden md:flex space-x-5">
-            <li><a href="#" className="text-white text-md uppercase font-inter">Home</a></li>
-            <li><a href="#" className="text-white text-md uppercase font-inter">Top Deals</a></li>
-            <li><a href="#" className="text-white text-md uppercase font-inter">Destinations</a></li>
-            <li><a href="#" className="text-white text-md uppercase font-inter">Contacts</a></li>
-            <li><a href="#" className="text-white text-md uppercase font-inter">Blog</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-sans font-regular">Home</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-sans font-regular">Top Deals</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-sans font-regular">Destinations</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-sans font-regular">Contacts</a></li>
+            <li><a href="#" className="text-white text-md uppercase font-sans font-regular">Blog</a></li>
           </ul>
         </div>
         <div className="relative flex items-center">
