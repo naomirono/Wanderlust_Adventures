@@ -1,25 +1,19 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Slider from 'react-slick';
-import '../style.css'
+import '../../style.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import card1 from '../assets/card1.jpg';
-import card2 from '../assets/card2.jpg';
-import card3 from '../assets/card3.jpg';
-import card4 from '../assets/card4.jpg';
-import card5 from '../assets/card5.jpg';
-import card6 from '../assets/card6.jpg';
 
 const HeroSection = ({ setBgImage }) => {
     const sliderRef = useRef(null);
 
   const cards = [
-    { id: 1, title: ' Diani', imageUrl: card3 },
-    { id: 2, title: 'Maasai Mara', imageUrl: card1 },
-    { id: 3, title: 'Malindi', imageUrl: card2 },
-    { id: 4, title: 'Mombasa', imageUrl: card4 },
-    { id: 5, title: 'Kilifi', imageUrl: card5 },
-    { id: 6, title: 'Watamu', imageUrl: card6 },
+    { id: 1, title: ' Diani', imageUrl: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card3.jpg' },
+    { id: 2, title: 'Maasai Mara', imageUrl: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card1.jpg' },
+    { id: 3, title: 'Malindi', imageUrl: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card2.jpg' },
+    { id: 4, title: 'Mombasa', imageUrl: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card4.jpg' },
+    { id: 5, title: 'Kilifi', imageUrl: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card5.jpg' },
+    { id: 6, title: 'Watamu', imageUrl: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card6.jpg' },
   ];
 
   const sliderSettings = {
