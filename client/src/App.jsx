@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import bgImage from '../src/assets/bg3.jpg';
-import HeroSection from './components/Hero';
+import { useState } from 'react';
+import bgImage from './assets/bg3.jpg';
+import HeroSection from './components/Hero/Hero';
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(bgImage);
