@@ -2,7 +2,8 @@ import aboutImg from '../../assets/Blue_Orange.png'
 
 const About = () => {
   return (
-    <div className="py-24 mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
+    <section className='bg-gray-100'>
+    <div className="py-12 mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
       <div className="flex">
         
         <div className="w-1/2">
@@ -46,6 +47,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 
