@@ -12,27 +12,30 @@ const About = () => {
 
         {/* Right Section */}
         <div className="w-1/2 ml-8">
-          <h4 className="text-2xl font-semibold mb-4">Who We Are</h4>
+          <h4 className="text-blue-500 text-xl font-extrabold mb-4">WHO WE ARE</h4>
           <h2 className="text-3xl font-bold mb-2">Real People Delivering Real Results</h2>
           <p className="mb-4">
-            Brief description of who we are and what we do. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          At Wanderlust, we are passionate about creating unforgettable travel experiences. Our team
+            is composed of avid travelers who believe in the transformative power of exploring new places.
           </p>
 
           {/* Two Points Section */}
           <div className="flex mb-4">
             <div className="mr-4 border-2 border-black">
-              <h3 className="text-xl font-semibold mb-2">Point 1</h3>
-              <p>Explanation of Point 1.</p>
+              <h3 className="text-xl font-semibold mb-2">Expert Planning</h3>
+              <p>We meticulously plan every detail of your journey to ensure a seamless and stress-free experience.</p>
             </div>
             <div className='border-2 border-black'>
-              <h3 className="text-xl font-semibold mb-2">Point 2</h3>
-              <p>Explanation of Point 2.</p>
+              <h3 className="text-xl font-semibold mb-2">Customized Packages</h3>
+              <p>Our travel packages are tailor-made to suit your preferences, ensuring a personalized adventure for you.</p>
             </div>
           </div>
 
           {/* Additional Paragraph */}
           <p className="mb-4">
-            Another paragraph describing additional information about the travel agency.
+          Embark on a journey with Wanderlust, where every destination is a new story waiting to be written.
+            Whether you seek relaxation on pristine beaches, cultural immersion in historic cities, or thrilling
+            adventures in exotic landscapes, we have the perfect itinerary for you.
           </p>
 
           {/* Call to Action Button */}
