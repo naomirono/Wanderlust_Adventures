@@ -2,7 +2,7 @@ import React from 'react';
 
 const Features = () => {
   return (
-    <div className="mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8 py-12">
+    <div className="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8 py-8">
       <div className="flex justify-around items-center">
 
         <div className="text-center">
