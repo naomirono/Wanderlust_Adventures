@@ -1,11 +1,10 @@
-import React from 'react';
 import aboutImg from '../../assets/Blue_Orange.png'
 
 const About = () => {
   return (
     <div className="py-24 mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
       <div className="flex">
-        {/* Left Section */}
+        
         <div className="w-1/2">
           <img src={aboutImg} alt="Airplane" className="w-full" />
         </div>
@@ -31,14 +30,12 @@ const About = () => {
             </div>
           </div>
 
-          {/* Additional Paragraph */}
           <p className="mb-4 font-inter">
           Embark on a journey with Wanderlust, where every destination is a new story waiting to be written.
             Whether you seek relaxation on pristine beaches, cultural immersion in historic cities, or thrilling
             adventures in exotic landscapes, we have the perfect itinerary for you.
           </p>
 
-          {/* Call to Action Button */}
           <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
             Contact Us
           </button>
