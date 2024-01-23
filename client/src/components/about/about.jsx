@@ -9,7 +9,6 @@ const About = () => {
           <img src={aboutImg} alt="Airplane" className="w-full" />
         </div>
 
-        {/* Right Section */}
         <div className="w-1/2 ml-8">
           <h4 className="text-blue-500 text-xl font-semibold mb-4 font-fira">WHO WE ARE</h4>
           <h2 className="text-4xl font-semibold font-fira mb-2">Real People Delivering Real Results</h2>
@@ -18,7 +17,6 @@ const About = () => {
             is composed of avid travelers who believe in the transformative power of exploring new places.
           </p>
 
-          {/* Two Points Section */}
           <div className="flex mb-4">
             <div className="w-1/2 mr-4 border-2 border-blue-500 p-2">
               <h3 className="text-l font-semibold mb-2 font-fira">Expert Planning</h3>
