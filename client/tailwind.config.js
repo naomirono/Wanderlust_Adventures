@@ -9,7 +9,9 @@ export default {
       fontFamily: {
         sans: ['Open Sans', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
-        playfair:['Playfair Display', 'serif']
+        playfair:['Playfair Display', 'serif'],
+        'fira': ['Fira Sans'],
+        'inter': ['Inter'],
       },
       fontWeight: {
         semibold: '600',
