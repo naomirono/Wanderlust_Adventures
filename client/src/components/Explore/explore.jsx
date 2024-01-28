@@ -5,45 +5,45 @@ const Explore = () => {
 
   const data = [
     {
-        name: 'Beautiful Beach 1',
+        name: 'Diani',
         location: 'Tropical Paradise',
         rating: 4.3,
-        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card3.jpg',
+        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/DianiWanderlust.jpg',
         category: 'beach',
       },
       {
-        name: 'Amazing Beach 2',
+        name: 'Watamu',
         location: 'Sunny Island',
         rating: 4.5,
-        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card4.jpg',
+        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card2.jpg',
         category: 'beach',
       },
       {
-        name: 'Paradise Beach 3',
+        name: 'Mombasa',
         location: 'Exotic Coast',
         rating: 4.7,
         image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card3.jpg',
         category: 'beach',
       },
       {
-        name: 'Thrilling Safari 1',
-        location: 'Wild Savannah',
-        rating: 4.2,
-        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card1.jpg',
-        category: 'safaris',
-      },
-      {
-        name: 'Exciting Safari 2',
+        name: 'Samburu',
         location: 'Jungle Adventure',
         rating: 4.6,
-        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card1.jpg',
+        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/SamburuWanderlust.jpg',
         category: 'safaris',
       },
       {
-        name: 'Majestic Safari 3',
+        name: 'Tsavo',
+        location: 'Wild Savannah',
+        rating: 4.2,
+        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/TsavoWanderlust.jpg',
+        category: 'safaris',
+      },
+      {
+        name: 'Amboseli',
         location: 'Serengeti Plains',
         rating: 4.8,
-        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/card1.jpg',
+        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/AmboseliWanderlust.jpg',
         category: 'safaris',
       },
       {
@@ -105,9 +105,9 @@ const Explore = () => {
     <div className="py-16 container mx-auto max-w-[1000px]">
       <div className="grid grid-cols-2">
       <div>
-  <h1 className="text-3xl font-semibold mb-4 font-fira">Explore Wanderlust by <span className='text-orange-500'>Categories</span> </h1>
+  <h1 className="text-4xl font-semibold mb-4 font-fira">Explore Wanderlust by <span className='text-orange-500'>Categories</span> </h1>
   <p className="text-gray-600 font-inter">
-    Embark on a journey of discovery with Wanderlust, where each category is a gateway to unique experiences. Whether its the thrill of adventure, the tranquility of nature, or the charm of cultural encounters, theres a category tailored to suit every travelers preferences.
+    Embark on a journey of discovery with Wanderlust, where each category is a gateway to unique experiences.
   </p>
 </div>
 
@@ -166,7 +166,6 @@ const Explore = () => {
         </div>
       </div>
       <div className="mt-12 max-w-[1000px] mx-auto">
-        {/* Display cards based on selected category */}
         <div className="grid grid-cols-3 gap-4">
           {filterData().map((item, index) => (
             <div key={index} className="bg-white p-4 rounded shadow w-full">
@@ -182,7 +181,7 @@ const Explore = () => {
 
                   </div>
                   <div className="flex w-1/3 pl-12">
-                <span className="text-yellow-500">&#9733;</span>
+                <span className="text-orange-500">&#9733;</span>
                 <span className="ml-1">{item.rating}</span>
               </div>
               </div>
