@@ -2,7 +2,8 @@ import React from 'react';
 
 const Features = () => {
   return (
-    <div className="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8 py-8">
+    <div className='relative'>
+    <div className="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8 py-8 bg-blur-md backdrop-blur-md bg-white bg-opacity-30 absolute bottom-[-70px] left-0 right-0">
       <div className="flex justify-around items-center">
 
         <div className="text-center">
@@ -35,6 +36,7 @@ const Features = () => {
           <p className="text-sm font-semibold">Booking</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
