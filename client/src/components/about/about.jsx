@@ -1,4 +1,4 @@
-import aboutImg from '../../assets/WanderlustAbout.png'
+import React from "react";
 
 const About = () => {
   return (
@@ -7,12 +7,12 @@ const About = () => {
       <div className="flex">
         
         <div className="w-1/2">
-          <img src={aboutImg} alt="Airplane" className="w-full" />
+          <img src='https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/AboutWanderlust.png' alt="Airplane" className="w-full" />
         </div>
 
         <div className="w-1/2 ml-8">
           <h4 className="text-orange-500 text-xl font-semibold mb-4 font-fira">WHO WE ARE</h4>
-          <h2 className="text-4xl font-semibold font-fira mb-2">Real People Delivering Real Results</h2>
+          <h2 className="text-4xl font-semibold font-fira mb-2">Wanderlust: Where Your Adventure Begins</h2>
           <p className="mb-6 font-inter">
           At Wanderlust, we are passionate about creating unforgettable travel experiences. Our team
             is composed of avid travelers who believe in the transformative power of exploring new places.
