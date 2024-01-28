@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
         <div className="relative flex items-center">
           <div className="absolute left-0 pl-2 top-1/2 transform -translate-y-1/2 text-gray-400">
-            <div className={isTyping ? 'bg-gray-500 text-white p-1 rounded-full text-xl' : ''}>
+            <div className={isTyping ? 'bg-orange-500 text-white p-1 rounded-full text-xl' : ''}>
               {isTyping ? <FiCheck /> : <FiSearch />}
             </div>
           </div>
@@ -37,12 +37,11 @@ const Navbar = () => {
             onChange={handleTyping}
           />
 
-          <div className="flex items-center space-x-4">
-            <a href="#" ><FaFacebook className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
-            <a href="#" ><FaInstagram className="text-3xl bg-white rounded-full p-1 text-pink-500 hover:text-pink-700 cursor-pointer"/></a>
-            <a href="#" ><FaTwitter className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
-            <a href="#" ><FaLinkedin className="text-3xl bg-white rounded-full p-1 text-blue-500 hover:text-blue-700 cursor-pointer"/></a>
-          </div>
+<div className="flex items-center space-x-4">
+  <a href="#" className="text-white px-6 py-2 border border-orange-500 rounded-full hover:bg-orange-500">Login</a>
+  <button className="bg-orange-500 text-white px-6 py-2 rounded-full border border-orange-500 hover:border-orange-700  hover:bg-orange-700">Join Us</button>
+</div>
+
         </div>
       </div>
     </nav>
