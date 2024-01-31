@@ -1,9 +1,48 @@
 import { useState } from 'react';
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useLogoutMutation } from "../../features/slices/usersApiSlice";
+import { clearCredentials } from "../../features/slices/authSlice";
 import { FiSearch, FiCheck } from 'react-icons/fi';
 
 const Navbar = () => {
-  const [isTyping, setIsTyping] = useState(false);
+    const { userInfo } = useSelector((state) => state.auth);
+    const [isTyping, setIsTyping] = useState(false);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+  
+    const [logout] = useLogoutMutation();
+  
+    const handleLogin = () => {
+      navigate("/login"); // Navigate to '/login'
+    };
+  
+    const logoutHandler = async () => {
+      try {
+        await logout().unwrap();
+        dispatch(clearCredentials());
+        navigate("/");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+  
+    const handleSignUp = () => {
+      navigate("/register");
+    };
+
+    const getProfileInitials = (name) => {
+        if (!name) return "";
+        const initials = name.split(" ").map((word) => word[0]).join("").toUpperCase();
+        return initials;
+      };
+
+      const handleScrollTo = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
 
   const handleTyping = (e) => {
     setIsTyping(e.target.value !== ''); 
@@ -37,10 +76,46 @@ const Navbar = () => {
             onChange={handleTyping}
           />
 
-<div className="flex items-center space-x-4">
-  <a href="#" className="text-white px-6 py-2 border border-orange-500 rounded-full hover:bg-orange-500">Login</a>
-  <button className="bg-orange-500 text-white px-6 py-2 rounded-full border border-orange-500 hover:border-orange-700  hover:bg-orange-700">Join Us</button>
-</div>
+
+                <div className="flex items-center space-x-4">
+                     <div>
+                        {userInfo ? (
+                            <>
+                             <div
+                               className="h-12 w-12 rounded-full bg-orange-500 flex items-center justify-center cursor-pointer"
+                             >
+                               <span className="text-lg font-semibold text-white">
+                                 {getProfileInitials(userInfo.name)}
+                               </span>
+                             </div>
+                        
+                           </>
+                        ) : (
+                            
+                            <button 
+                            onClick={handleLogin} 
+                            className="border-2 border-orange-500 text-white px-4 py-1.5 rounded-full focus:outline-none">
+                            
+                                Login
+                            </button>
+                        )}
+                    </div>
+                    <div>
+                       {userInfo ? (
+                            <button
+                                onClick={logoutHandler}
+                                className="text-white hover:text-orange-500"
+                            >
+                              Sign Out
+                            </button>
+                        ) : (
+                            <a href="#" onClick={handleSignUp} className="bg-orange-500 text-white border-orange-600 px-4 py-2 rounded-full focus:outline-none">
+                            
+                                <span>Join Us</span>
+                            </a>
+                        )}
+                    </div>
+                 </div>
 
         </div>
       </div>
