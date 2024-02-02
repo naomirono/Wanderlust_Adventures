@@ -31,7 +31,7 @@ const ForgotPassword = () => {
   return (
     <div className="flex h-screen bg-white">
       <div className="hidden relative sm:flex justify-center items-center flex-1 w-full bg-cover bg-center h-screen" style={{ backgroundImage: 'url("https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/bg3.jpg")', position: 'relative' }}>
-  {/* Glass-like overlay */}
+  
   <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
   <div className="text-center relative z-10">
