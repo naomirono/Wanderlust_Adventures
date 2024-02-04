@@ -39,7 +39,7 @@ const ForgotPassword = () => {
   </div>
 </div>
 
-      {/* Right side */}
+      
       <div className="w-full sm:w-1/2 flex justify-center items-center">
         <div className="sm:w-96 p-5">
           <div className="text-center">
