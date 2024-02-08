@@ -101,7 +101,7 @@ const HeroSection = ({ setBgImage }) => {
           >
             {'>'}
           </button>
-          <div className="border-b-2 border-white w-[550px] absolute bottom-4 ml-32"></div> {/* Added border */}
+          <div className="border-b-2 border-white w-[550px] absolute bottom-4 ml-32"></div> 
         </div>
       </div>
     </div>
