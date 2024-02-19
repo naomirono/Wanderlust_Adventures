@@ -25,7 +25,7 @@ const Explore = () => {
             </p>
           </div>
 
-          <div className="flex justify-end space-x-2 mt-4 md:mt-0">
+          <div className="flex justify-end space-x-2 md:justify-center md:items-start mt-4 md:mt-2">
             <button
               className={`mr-2 py-1 px-4 rounded rounded-[25px] border border-orange-500 font-inter ${
                 selectedCategory === 'all' ? 'bg-orange-500 text-white py-1 px-4 rounded rounded-[25px]' : ''
