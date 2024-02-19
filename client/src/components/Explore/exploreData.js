@@ -45,7 +45,7 @@ export const data = [
         name: 'Mt. Kenya',
         location: 'Kenya',
         rating: 4.4,
-        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/Mt.+Kenya.jpeg',
+        image: 'https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/Mt.Kenya.jpg',
         category: 'mountains',
       },
       {
