@@ -44,32 +44,27 @@ const PopularSection = () => {
 
   return (
       <section className='bg-gray-100'>
-    <div className="pt-24 pb-8 container mx-auto max-w-[1000px]">
-      <div className="grid grid-cols-2">
-      <div>
-  <h1 className="text-4xl font-semibold mb-4 font-fira">Popular <span className='text-orange-500'>Destinations</span> </h1>
-</div>
-
-      </div>
-      <div className="mt-8 max-w-[1000px] mx-auto">
-        <Slider ref={sliderRef} {...sliderSettings}>
-          {cards.map(card => (
-            <div key={card.id} className="p-2">
-              <div className="relative">
-              <img
-              src={card.imageUrl}
-              alt={card.title}
-              className="object-cover h-80 w-full rounded-xl"
-            />
-                <div className="absolute bottom-0 left-0 right-0 text-center text-white p-4">
-                  <h2 className="text-xl font-bold font-sans uppercase">{card.title}</h2>
+      <div className="pt-24 pb-8 container mx-auto max-w-[1000px]">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="md:col-span-2 md:mb-4">
+            <h1 className="text-4xl font-semibold ml-2 font-fira md:mb-4">Popular <span className='text-orange-500'>Destinations</span> </h1>
+          </div>
+        </div>
+        <div className="mt-8 max-w-[1000px] mx-auto">
+          <Slider ref={sliderRef} {...sliderSettings}>
+            {cards.map((card) => (
+              <div key={card.id} className="p-2">
+                <div className="relative">
+                  <img src={card.imageUrl} alt={card.title} className="object-cover h-80 w-full rounded-xl" />
+                  <div className="absolute bottom-0 left-0 right-0 text-center text-white p-4">
+                    <h2 className="text-xl font-bold font-sans uppercase">{card.title}</h2>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
     </section>
   );
 };
