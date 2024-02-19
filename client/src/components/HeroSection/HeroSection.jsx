@@ -1,11 +1,11 @@
 const HeroSection = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row h-screen md:h-[88vh] md:pb-10 items-center px-2 ">
-      <div className="w-full md:w-1/2 md:pl-10 md:ml-16 pb-16">
+    <div className="flex flex-col-reverse md:flex-row md:h-[88vh] md:pb-10 items-center px-2 ">
+      <div className="w-full mt-4 md:w-1/2 md:pl-10 md:ml-16 pb-16">
         <h1 className="text-3xl md:text-5xl font-semibold mb-4 md:mb-8 text-white font-montserrat uppercase">
           Discover the Heartbeat of Africa with <span className="text-orange-500">Wanderlust</span>
         </h1>
-        <p className="mb-4 text-gray-100 text-base md:text-lg font-sans font-regular">
+        <p className="md:mb-4 text-gray-100 text-base md:text-lg font-sans font-regular">
           Discover Kenya's beauty with our curated tours — from Maasai Mara to coastal beaches.
           Our guides ensure every moment is filled with awe and wonder.
         </p>
@@ -16,11 +16,11 @@ const HeroSection = () => {
           <i className="fa-solid fa-arrow-right mr-2"></i>Our Services
         </button>
       </div>
-      <div className="w-full md:w-1/2 mt-4 md:mt-0 relative">
+      <div className="w-full md:w-1/2 md:mt-4 relative">
         <img
           src="https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/WanderlustHero.png"
           alt="Discount Image"
-          className="object-contain w-full h-[60vh] md:h-[60vh]"
+          className="object-contain w-full h-full md:h-[60vh]"
         />
       </div>
     </div>
