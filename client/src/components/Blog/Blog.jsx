@@ -6,9 +6,9 @@ const BlogSection = () => {
       <section className=" py-8 relative">
         <div className="container mx-auto max-w-[1100px] relative z-10">
         <div className='text-center mb-8'>
-  <h2 className="text-4xl font-bold text-black font-fira font-semibold mb-4">Discover Kenya in <span className="text-orange-500">Our Blog</span> </h2>
-  <p className="text-lg text-gray-500 mb-12 font-inter font-regular">Explore the beauty of Kenya through our blog posts. From Nairobi to Maasai Mara, our stories and insider tips provide a virtual journey into the diverse landscapes and rich culture of this incredible destination.</p>
-</div>
+          <h2 className="text-4xl font-bold text-black font-fira font-semibold mb-4">Discover Kenya in <span className="text-orange-500">Our Blog</span> </h2>
+          <p className="text-lg text-gray-500 mb-12 font-inter font-regular px-2">Explore the beauty of Kenya through our blog posts. From Nairobi to Maasai Mara, our stories and insider tips provide a virtual journey into the diverse landscapes and rich culture of this incredible destination.</p>
+        </div>
 
   
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 lg:mx-0">
