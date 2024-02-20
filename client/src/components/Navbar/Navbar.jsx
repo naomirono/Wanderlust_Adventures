@@ -49,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="p-4 fixed md:relative top-0 left-0 w-full text-black md:text-white z-10 md:bg-transparent bg-blur-md backdrop-blur-md bg-white bg-opacity-50">
+    <nav className="p-4 fixed md:relative top-0 left-0 w-full md:text-white z-20 md:bg-transparent bg-blur-md backdrop-blur-md bg-[#2563eb] bg-opacity-80">
       <div className="container mx-auto flex justify-between items-center">
 
         <div className="flex items-center">
