@@ -13,7 +13,7 @@ const Explore = () => {
   };
 
   return (
-    <section className="bg-gray-100">
+    <section id='destinations' className="bg-gray-100">
       <div className="py-8 px-4 md:py-12 container mx-auto max-w-[1000px]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div>
