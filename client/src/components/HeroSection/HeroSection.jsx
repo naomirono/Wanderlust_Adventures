@@ -1,7 +1,7 @@
 const HeroSection = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row md:h-[88vh] md:pb-10 items-center px-2 ">
-      <div className="w-full mt-4 md:w-1/2 md:pl-10 md:ml-16 pb-16">
+    <div id="home" className="flex flex-col-reverse md:flex-row md:h-[88vh] md:pb-10 items-center px-2 mt-28 md:mt-0">
+      <div className="w-full mt-4 md:w-1/2 md:pl-10 md:ml-16 md:pb-16">
         <h1 className="text-3xl md:text-5xl font-semibold mb-4 md:mb-8 text-white font-montserrat uppercase">
           Discover the Heartbeat of Africa with <span className="text-orange-500">Wanderlust</span>
         </h1>
