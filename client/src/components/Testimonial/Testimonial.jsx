@@ -1,12 +1,12 @@
 
 const Testimonial = () => {
   return (
-    <div className="bg-cover bg-center my-8" style={{ backgroundImage: `url('https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/bg3.jpg')` }}>
+    <div id="testimonials" className="bg-cover bg-center my-8" style={{ backgroundImage: `url('https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/bg3.jpg')` }}>
       <div className='bg-black bg-opacity-70'>
         <div className="flex flex-col md:flex-row p-8 max-w-[1100px] mx-auto py-20">
 
           <div className="w-full md:w-1/2 pr-0 md:pr-8 relative z-10">
-            <h6 className="text-l font-fira font-semibold mb-2 text-orange-500">TESTIMONIAL</h6>
+            <h6 className="text-l font-fira font-semibold mb-2 text-orange-500">TESTIMONIALS</h6>
             <h2 className="text-5xl font-fira font-semibold mb-4 text-white">What Our <span className='text-orange-500'>Clients</span> Say</h2>
             <p className="text-gray-300 font-inter font-regular text-xl">
               Embarking on a journey with Wanderlust is an unparalleled experience. Every destination is a masterpiece.
