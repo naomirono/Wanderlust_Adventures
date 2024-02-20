@@ -9,7 +9,7 @@ const Footer = () => {
     setEmail(e.target.value);
   };
   return (
-    <footer className="text-white py-8 relative" style={{
+    <footer className="text-white py-8 relative mb-12 md:mb-0" style={{
         backgroundImage: "url('https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/DianiWanderlust.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
