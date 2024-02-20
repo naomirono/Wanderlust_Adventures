@@ -6,11 +6,13 @@ import PopularSection from "../../components/Popular/Popular";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import BlogSection from "../../components/Blog/Blog";
 import Footer from "../../components/Footer/Footer";
+import NavbarBottom from "../../components/Navbar/NavbarBottom";
 
 const LandingPage = () => {
   
   return (
     <div className="bg-gray-100">
+      <NavbarBottom/>
       <HomeHero/>
       <Features/>
       <PopularSection/>
