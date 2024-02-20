@@ -3,7 +3,7 @@ import { blogPosts } from "./blogData";
 const BlogSection = () => {
   
     return (
-      <section className=" py-8 relative">
+      <section id="blog" className=" py-8 relative">
         <div className="container mx-auto max-w-[1100px] relative z-10">
         <div className='text-center mb-8'>
           <h2 className="text-4xl font-bold text-black font-fira font-semibold mb-4">Discover Kenya in <span className="text-orange-500">Our Blog</span> </h2>
