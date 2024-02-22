@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -15,21 +15,38 @@ const initialState = {
   password: "",
   password2: "",
 };
+
 const SignUpOne = () => {
   const [userData, setUserData] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [validationErrors, setValidationErrors] = useState({});
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [signUp, { isLoading }] = useSignUpMutation();
 
-  //  Handle input
   const handleInputChange = (e) => {
-    setUserData((userData) => ({
-      ...userData,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+
+    // Validate name field
+    if (name === 'name' && value.length < 3) {
+      setValidationErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: 'Name must be at least 3 characters long',
+      }));
+    } else {
+      // Clear validation error if present
+      setValidationErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: '',
+      }));
+    }
+
+    setUserData((prevUserData) => ({
+      ...prevUserData,
+      [name]: value,
     }));
   };
 
@@ -39,12 +56,15 @@ const SignUpOne = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!userData.name || !userData.email || !userData.password) {
       return toast.error("All fields are required");
     }
+
     if (userData.password.length < 6) {
       return toast.error("Password must be up to 6 characters");
     }
+
     if (userData.password !== userData.password2) {
       return toast.error("Passwords do not match");
     }
@@ -54,6 +74,7 @@ const SignUpOne = () => {
       email: userData.email,
       password: userData.password,
     };
+
     setLoading(true);
 
     try {
@@ -66,19 +87,15 @@ const SignUpOne = () => {
       toast.error(err?.data?.message || err.error?.message);
     }
   };
+
   return (
     <div className="flex w-full bg-white">
-      {/* left side */}
       <div className="hidden relative sm:flex justify-center items-center flex-1 w-full bg-cover bg-center h-screen" style={{ backgroundImage: 'url("https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/bg3.jpg")', position: 'relative' }}>
-  {/* Glass-like overlay */}
-  <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-
-  <div className="text-center relative z-10">
-    <img src='https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/Black_and_Orange_Illustration_Company_Logo__2_-fotor-20240129151630-removebg-preview.png' alt="logo" />
-  </div>
-</div>
-
-
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="text-center relative z-10">
+          <img src='https://mywanderlustbucket.s3.eu-north-1.amazonaws.com/Black_and_Orange_Illustration_Company_Logo__2_-fotor-20240129151630-removebg-preview.png' alt="logo" />
+        </div>
+      </div>
 
       <div className="flex flex-col h-[100vh] justify-between w-full flex-1">
         <div className="flex justify-end p-4">
@@ -118,6 +135,9 @@ const SignUpOne = () => {
               placeholder="Name"
               required
             />
+            {validationErrors.name && (
+              <p className="font-inter" style={{ color: 'red', marginTop: '8px' }}>{validationErrors.name}</p>
+            )}
           </div>
 
           <div>
@@ -223,6 +243,7 @@ const SignUpOne = () => {
             </button>
           </div>
         </form>
+
         <p className=" text-center  mx-auto w-[305px] ">
           By continuing you accept our standard
           <span className="underline px-2 text-[var(--primary)]">
