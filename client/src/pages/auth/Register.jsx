@@ -30,14 +30,12 @@ const SignUpOne = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    // Validate name field
     if (name === 'name' && value.length < 3) {
       setValidationErrors((prevErrors) => ({
         ...prevErrors,
         [name]: 'Name must be at least 3 characters long',
       }));
     } else {
-      // Clear validation error if present
       setValidationErrors((prevErrors) => ({
         ...prevErrors,
         [name]: '',
